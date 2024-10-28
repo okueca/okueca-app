@@ -1,6 +1,7 @@
 "use client";
 import Image from "next/image";
 import * as Avatar from "@radix-ui/react-avatar";
+import { useState, useEffect } from "react";
 
 import {
   FaInstagram,
@@ -10,7 +11,7 @@ import {
   FaJenkins,
   FaReact,
   FaNodeJs,
-  FaBootstrap
+  FaBootstrap,
 } from "react-icons/fa";
 import { FaXTwitter, FaLocationDot } from "react-icons/fa6";
 import {
@@ -20,12 +21,27 @@ import {
   SiNginx,
   SiGrafana,
   SiRubyonrails,
-  SiTailwindcss
+  SiTailwindcss,
 } from "react-icons/si";
 import { BsFillPeopleFill } from "react-icons/bs";
 import { MdEmail } from "react-icons/md";
 
 export default function Home() {
+  const [data, setData] = useState(null);
+
+  useEffect(() => {
+    async function fetchPosts() {
+      let res = await fetch("https://api.github.com/orgs/okueca/members", {
+        headers: {
+          Authorization: "Bearer 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",
+        },
+      });
+      let data = await res.json();
+      setData(data);
+    }
+    fetchPosts();
+  }, []);
+
   return (
     <main className=" container mx-auto ">
       <section className=" flex-wrap border-b border-gray-500 p-5 mb-10">
@@ -50,7 +66,7 @@ export default function Home() {
               <div className="flex flex-row align-items-center flex-wrap gap-5 ">
                 <div className="flex flex-row items-center gap-2">
                   <BsFillPeopleFill />
-                  <div> 5 community</div>
+                  <div> {data?.length} community</div>
                 </div>
 
                 <div className="flex flex-row items-center gap-2">
@@ -103,70 +119,78 @@ export default function Home() {
                 <h2 className="text-lg font-semibold">
                   Planeamento e Arquitetura
                 </h2>
-                <p className="text-gray-400 mt-1">
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry. Lorem Ipsum has been the industry's
-                  standard dummy text ever since the 1500s, when an unknown
-                  printer took a galley of type and scrambled it to make a type
-                  specimen book. It has survived not only five centuries, but
-                  also the leap into electronic typesetting, remaining
-                  essentially unchanged. It was popularised in the 1960s with
-                  the release of Letraset sheets containing Lorem Ipsum
-                  passages, and more recently with desktop publishing software
-                  like Aldus PageMaker including versions of Lorem Ipsum
+                <p className="text-gray-300 mt-1 text-wrap leading-6 tracking-wide">
+                  Planeamento e a Arquitetura de software são fases cruciais no
+                  desenvolvimento de sistemas complexos e consistem em definir
+                  como o software será estruturado, como os seus componentes
+                  interagem e de que forma ele atenderá aos requisitos
+                  funcionais e não funcionais. Estes conceitos vão muito além do
+                  código, pois englobam decisões estratégicas e estruturais que
+                  vão orientar toda a implementação, manutenção e evolução do
+                  sistema.
                 </p>
               </div>
               {/* Connector */}
-              <div className="border-l-2 border-gray-500 h-10 ml-14"></div>
+              <div className="border-l-2 border-gray-500 h-10 ml-16"></div>
 
               <div className="bg-gray-700 p-4 rounded-lg shadow">
-                <h2 className="text-lg font-semibold">Collaborative coding</h2>
-                <p className="text-gray-400 mt-1">
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry. Lorem Ipsum has been the industry's
-                  standard dummy text ever since the 1500s, when an unknown
-                  printer took a galley of type and scrambled it to make a type
-                  specimen book. It has survived not only five centuries, but
-                  also the leap into electronic typesetting, remaining
-                  essentially unchanged. It was popularised in the 1960s with
-                  the release of Letraset sheets containing Lorem Ipsum
-                  passages, and more recently with desktop publishing software
-                  like Aldus PageMaker including versions of Lorem Ipsum
+                <h2 className="text-lg font-semibold">
+                  Codificação colaborativa
+                </h2>
+                <p className="text-gray-300 mt-1 text-wrap leading-6 tracking-wide">
+                  A codificação colaborativa é um aspecto vital do
+                  desenvolvimento de software, especialmente em equipes e
+                  projetos de grande escala. Esse processo envolve várias
+                  práticas, ferramentas e metodologias que facilitam o trabalho
+                  conjunto e a criação de um código consistente, eficiente e
+                  fácil de manter.
                 </p>
               </div>
               {/* Connector */}
-              <div className="border-l-2 border-gray-500 h-10 ml-14"></div>
+              <div className="border-l-2 border-gray-500 h-10 ml-16"></div>
 
               <div className="bg-gray-700 p-4 rounded-lg shadow">
-                <h2 className="text-lg font-semibold">Automation and CI/CD</h2>
-                <p className="text-gray-400 mt-1">
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry. Lorem Ipsum has been the industry's
-                  standard dummy text ever since the 1500s, when an unknown
-                  printer took a galley of type and scrambled it to make a type
-                  specimen book. It has survived not only five centuries, but
-                  also the leap into electronic typesetting, remaining
-                  essentially unchanged. It was popularised in the 1960s with
-                  the release of Letraset sheets containing Lorem Ipsum
-                  passages, and more recently with desktop publishing software
-                  like Aldus PageMaker including versions of Lorem Ipsum
+                <h2 className="text-lg font-semibold">Teste de Software</h2>
+                <p className="text-gray-300 mt-1 text-wrap leading-6 tracking-wide">
+                  O teste de software é um processo essencial no desenvolvimento
+                  de sistemas, utilizado para verificar se uma aplicação ou
+                  sistema está funcionando conforme o esperado e atende aos
+                  requisitos especificados. Esse processo ajuda a identificar
+                  erros, garantir a qualidade e aumentar a confiabilidade do
+                  software antes de ser lançado para os usuários finais. Vamos
+                  detalhar os principais tipos de testes de software, abordagens
+                  e boas práticas.
                 </p>
               </div>
               {/* Connector */}
-              <div className="border-l-2 border-gray-500 h-10 ml-14"></div>
+              <div className="border-l-2 border-gray-500 h-10 ml-16"></div>
+
+              <div className="bg-gray-700 p-4 rounded-lg shadow">
+                <h2 className="text-lg font-semibold">Automação & CI/CD</h2>
+                <p className="text-gray-300 mt-1 text-wrap leading-6 tracking-wide">
+                  A automação e as práticas de CI/CD (Continuous
+                  Integration/Continuous Delivery) revolucionaram o
+                  desenvolvimento de software, melhorando a qualidade, a
+                  velocidade e a confiabilidade dos projetos. A ideia é criar um
+                  fluxo de trabalho contínuo, onde as mudanças no código são
+                  testadas, integradas e implantadas automaticamente, reduzindo
+                  o esforço manual e o tempo de entrega.
+                </p>
+              </div>
+              {/* Connector */}
+              <div className="border-l-2 border-gray-500 h-10 ml-16"></div>
+
               <div className="bg-gray-700 p-4 rounded-lg shadow">
                 <h2 className="text-lg font-semibold">Contenerização</h2>
-                <p className="text-gray-400 mt-1">
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry. Lorem Ipsum has been the industry's
-                  standard dummy text ever since the 1500s, when an unknown
-                  printer took a galley of type and scrambled it to make a type
-                  specimen book. It has survived not only five centuries, but
-                  also the leap into electronic typesetting, remaining
-                  essentially unchanged. It was popularised in the 1960s with
-                  the release of Letraset sheets containing Lorem Ipsum
-                  passages, and more recently with desktop publishing software
-                  like Aldus PageMaker including versions of Lorem Ipsum
+                <p className="text-gray-300 mt-1 text-wrap leading-6 tracking-wide ">
+                  A contenerização é uma tecnologia que permite empacotar uma
+                  aplicação e todas as suas dependências (bibliotecas,
+                  configurações, etc.) em um "container" isolado, que pode ser
+                  executado de maneira consistente em diferentes ambientes. Ela
+                  garante que o software funcione de forma previsível,
+                  independentemente de onde está sendo executado (como no
+                  ambiente de desenvolvimento, homologação, produção ou entre
+                  diferentes plataformas de nuvem).
                 </p>
               </div>
             </div>
@@ -188,7 +212,7 @@ export default function Home() {
 
           <div className="p-4  border-b border-gray-700">
             <h2 className="text-sm uppercase mb-2 text-gray-400">
-              Discussions
+              Eventos
             </h2>
           </div>
 
@@ -423,14 +447,13 @@ export default function Home() {
                 </div>
               </div>
 
-
               <div className="p-4 border-b border-gray-700 tool-max-with">
                 <h2 className="text-sm uppercase mb-2 text-gray-400">
                   TOP Frameworks
                 </h2>
                 <div className="flex flex-row items-center flex-wrap  gap-4 w-100">
                   <div className="flex  flex-col ">
-                  <SiRubyonrails size={35}/>
+                    <SiRubyonrails size={35} />
 
                     <small>Rails</small>
                   </div>
@@ -453,8 +476,6 @@ export default function Home() {
                     <FaBootstrap size={35} className="self-center" />
                     <small>BootStrap</small>
                   </div>
-
-                
                 </div>
               </div>
 
@@ -462,32 +483,20 @@ export default function Home() {
                 <h2 className="text-sm uppercase mb-2 text-gray-400">
                   Desenvolvedores
                 </h2>
+
                 <div className="flex gap-2 flex-wrap">
-                  <Avatar.Root className="AvatarRoot">
-                    <Avatar.Image
-                      className="AvatarImage"
-                      src="https://images.unsplash.com/photo-1492633423870-43d1cd2775eb?&w=128&h=128&dpr=2&q=80"
-                      alt="Colm Tuite"
-                    />
-                    <Avatar.Fallback className="AvatarFallback" delayMs={600}>
-                      CT
-                    </Avatar.Fallback>
-                  </Avatar.Root>
-                  <Avatar.Root className="AvatarRoot">
-                    <Avatar.Image
-                      className="AvatarImage"
-                      src="https://images.unsplash.com/photo-1511485977113-f34c92461ad9?ixlib=rb-1.2.1&w=128&h=128&dpr=2&q=80"
-                      alt="Pedro Duarte"
-                    />
-                    <Avatar.Fallback className="AvatarFallback" delayMs={600}>
-                      JD
-                    </Avatar.Fallback>
-                  </Avatar.Root>
-                  <Avatar.Root className="AvatarRoot">
-                    <Avatar.Fallback className="AvatarFallback">
-                      PD
-                    </Avatar.Fallback>
-                  </Avatar.Root>
+                  {data?.map((d) => (
+                    <Avatar.Root className="AvatarRoot" key={d.id}>
+                      <Avatar.Image
+                        className="AvatarImage"
+                        src={d.avatar_url}
+                        alt={d.login}
+                      />
+                      <Avatar.Fallback className="AvatarFallback" delayMs={600}>
+                        CT
+                      </Avatar.Fallback>
+                    </Avatar.Root>
+                  ))}
                 </div>
               </div>
             </div>
