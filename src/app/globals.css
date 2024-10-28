@@ -18,6 +18,7 @@ body {
   color: var(--foreground);
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
+  margin: 10px;
 }
 
 
@@ -66,4 +67,15 @@ body {
 .tool-max-with{
   max-width: 100%;
  
+}
+
+
+@media only screen and (max-width: 768px) {
+  .main-section{
+    max-width: 100%;
+  }
+  
+  .side-section{
+    max-width: 100%;
+  }
 }

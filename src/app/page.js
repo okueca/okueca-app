@@ -25,7 +25,7 @@ export default function Home() {
     <main className=" container mx-auto ">
       <section className=" flex-wrap border-b border-gray-500 p-5 mb-10">
         <div className="flex flex-row items-center gap-5 justify-between">
-          <div className="flex flex-row items-center gap-5">
+          <div className="flex flex-row items-center flex-wrap gap-5">
             <div>
               <Image
                 src="/logo.jpeg"
@@ -42,7 +42,7 @@ export default function Home() {
                 solutions with the help of technology in order to assist in some
                 way.
               </p>
-              <div className="flex flex-row align-items-center gap-5 ">
+              <div className="flex flex-row align-items-center flex-wrap gap-5 ">
                 <div className="flex flex-row items-center gap-2">
                   <BsFillPeopleFill />
                   <div> 5 community</div>
@@ -61,19 +61,24 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="">
-            <Image
-              src="/animationbrain.gif"
-              width={150}
-              height={150}
-              alt="Picture of the author"
-            />
-          </div>
+{
+  window.innerWidth > "768" &&
+ <div className="">
+ <Image
+   src="/animationbrain.gif"
+   width={150}
+   height={150}
+   alt="Picture of the author"
+ />
+</div>
+
+}
+         
         </div>
       </section>
 
       <section className="flex flex-row gap-5   flex-wrap w-100">
-        <div className="main-section">
+        <div className="main-section ">
           <div className="flex flex-col border border-gray-500 p-5">
             <div className="border-b border-gray-500 mb-3 pb-2">
               <h6>Olá 👋</h6>
@@ -93,7 +98,9 @@ export default function Home() {
             <div className=" flex flex-col gap-1">
               {/* Task Suggestions */}
               <div className="bg-gray-700 p-4 rounded-lg shadow">
-                <h2 className="text-lg font-semibold">Planeamento e Arquitetura</h2>
+                <h2 className="text-lg font-semibold">
+                  Planeamento e Arquitetura
+                </h2>
                 <p className="text-gray-400 mt-1">
                   Lorem Ipsum is simply dummy text of the printing and
                   typesetting industry. Lorem Ipsum has been the industry's
@@ -146,9 +153,7 @@ export default function Home() {
               {/* Connector */}
               <div className="border-l-2 border-gray-500 h-10 ml-14"></div>
               <div className="bg-gray-700 p-4 rounded-lg shadow">
-                <h2 className="text-lg font-semibold">
-                  Contenerização
-                </h2>
+                <h2 className="text-lg font-semibold">Contenerização</h2>
                 <p className="text-gray-400 mt-1">
                   Lorem Ipsum is simply dummy text of the printing and
                   typesetting industry. Lorem Ipsum has been the industry's
@@ -337,8 +342,8 @@ export default function Home() {
                   Top Languages
                 </h2>
 
-                <ul className="flex space-x-3 ">
-                  <div className="flex flex-row align-items-center  gap-1 w-100">
+                <ul className="flex space-x-3 flex-wrap">
+                  <div className="flex flex-row align-items-center   gap-1 w-100">
                     <div className="w-2 bg-yellow-400 h-2 rounded self-center"></div>
                     <div>
                       <li className="text-gray-700">JavaScript</li>
