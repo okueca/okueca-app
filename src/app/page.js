@@ -8,6 +8,9 @@ import {
   FaTiktok,
   FaDocker,
   FaJenkins,
+  FaReact,
+  FaNodeJs,
+  FaBootstrap
 } from "react-icons/fa";
 import { FaXTwitter, FaLocationDot } from "react-icons/fa6";
 import {
@@ -16,6 +19,8 @@ import {
   SiPostman,
   SiNginx,
   SiGrafana,
+  SiRubyonrails,
+  SiTailwindcss
 } from "react-icons/si";
 import { BsFillPeopleFill } from "react-icons/bs";
 import { MdEmail } from "react-icons/md";
@@ -61,19 +66,16 @@ export default function Home() {
             </div>
           </div>
 
-{
-  window.innerWidth > "768" &&
- <div className="">
- <Image
-   src="/animationbrain.gif"
-   width={150}
-   height={150}
-   alt="Picture of the author"
- />
-</div>
-
-}
-         
+          {window.innerWidth > "768" && (
+            <div className="">
+              <Image
+                src="/animationbrain.gif"
+                width={150}
+                height={150}
+                alt="Picture of the author"
+              />
+            </div>
+          )}
         </div>
       </section>
 
@@ -421,11 +423,46 @@ export default function Home() {
                 </div>
               </div>
 
+
+              <div className="p-4 border-b border-gray-700 tool-max-with">
+                <h2 className="text-sm uppercase mb-2 text-gray-400">
+                  TOP Frameworks
+                </h2>
+                <div className="flex flex-row items-center flex-wrap  gap-4 w-100">
+                  <div className="flex  flex-col ">
+                  <SiRubyonrails size={35}/>
+
+                    <small>Rails</small>
+                  </div>
+                  <div className="flex  flex-col ">
+                    <FaReact size={35} className="self-center" />
+                    <small>React</small>
+                  </div>
+
+                  <div className="flex  flex-col ">
+                    <FaNodeJs size={35} className="self-center" />
+                    <small>Nodejs</small>
+                  </div>
+
+                  <div className="flex  flex-col ">
+                    <SiTailwindcss size={35} className="self-center" />
+                    <small>Tailwind</small>
+                  </div>
+
+                  <div className="flex  flex-col ">
+                    <FaBootstrap size={35} className="self-center" />
+                    <small>BootStrap</small>
+                  </div>
+
+                
+                </div>
+              </div>
+
               <div className="p-4">
                 <h2 className="text-sm uppercase mb-2 text-gray-400">
                   Desenvolvedores
                 </h2>
-                <div className="flex gap-2">
+                <div className="flex gap-2 flex-wrap">
                   <Avatar.Root className="AvatarRoot">
                     <Avatar.Image
                       className="AvatarImage"
