@@ -66,7 +66,7 @@ export default function Home() {
             </div>
           </div>
 
-          {window.innerWidth > "768" && (
+          {window.innerWidth > "1024" && (
             <div className="">
               <Image
                 src="/animationbrain.gif"
