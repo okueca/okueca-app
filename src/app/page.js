@@ -1,101 +1,468 @@
+"use client";
 import Image from "next/image";
+import * as Avatar from "@radix-ui/react-avatar";
+
+import {
+  FaInstagram,
+  FaFacebook,
+  FaTiktok,
+  FaDocker,
+  FaJenkins,
+} from "react-icons/fa";
+import { FaXTwitter, FaLocationDot } from "react-icons/fa6";
+import {
+  SiKubernetes,
+  SiVisualstudiocode,
+  SiPostman,
+  SiNginx,
+  SiGrafana,
+} from "react-icons/si";
+import { BsFillPeopleFill } from "react-icons/bs";
+import { MdEmail } from "react-icons/md";
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.js
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+    <main className=" container mx-auto ">
+      <section className=" flex-wrap border-b border-gray-500 p-5 mb-10">
+        <div className="flex flex-row items-center gap-5 justify-between">
+          <div className="flex flex-row items-center gap-5">
+            <div>
+              <Image
+                src="/logo.jpeg"
+                width={100}
+                height={100}
+                alt="Picture of the author"
+              />
+            </div>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+            <div className="flex flex-col justify-center align-items-center gap-4">
+              <h6>OKWETCHA</h6>
+              <p>
+                Okueca is a non-profit African organization that aims to develop
+                solutions with the help of technology in order to assist in some
+                way.
+              </p>
+              <div className="flex flex-row align-items-center gap-5 ">
+                <div className="flex flex-row items-center gap-2">
+                  <BsFillPeopleFill />
+                  <div> 5 community</div>
+                </div>
+
+                <div className="flex flex-row items-center gap-2">
+                  <FaLocationDot />
+                  <div> Portugal/Angola/Cabo Verde</div>
+                </div>
+
+                <div className="flex flex-row items-center gap-2">
+                  <MdEmail />
+                  <div> okueca@gmail.com</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="">
             <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
+              src="/animationbrain.gif"
+              width={150}
+              height={150}
+              alt="Picture of the author"
             />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+      </section>
+
+      <section className="flex flex-row gap-5   flex-wrap w-100">
+        <div className="main-section">
+          <div className="flex flex-col border border-gray-500 p-5">
+            <div className="border-b border-gray-500 mb-3 pb-2">
+              <h6>Olá 👋</h6>
+            </div>
+            <p>
+              🙋‍ Okwetcha significa DAR/DOAR , a ideia é criar uma comunidade
+              que com auxilio da Engenharia ajude de algum modo países africanos
+              ou comunidades africanas a resolverem alguns problemas. 🌈
+            </p>
+          </div>
+
+          <div className="flex-1 py-6  text-white">
+            <h1 className="text-2xl font-bold mb-4">
+              Como Desenvolvemos os nossos Projectos.
+            </h1>
+
+            <div className=" flex flex-col gap-1">
+              {/* Task Suggestions */}
+              <div className="bg-gray-700 p-4 rounded-lg shadow">
+                <h2 className="text-lg font-semibold">Planeamento e Arquitetura</h2>
+                <p className="text-gray-400 mt-1">
+                  Lorem Ipsum is simply dummy text of the printing and
+                  typesetting industry. Lorem Ipsum has been the industry's
+                  standard dummy text ever since the 1500s, when an unknown
+                  printer took a galley of type and scrambled it to make a type
+                  specimen book. It has survived not only five centuries, but
+                  also the leap into electronic typesetting, remaining
+                  essentially unchanged. It was popularised in the 1960s with
+                  the release of Letraset sheets containing Lorem Ipsum
+                  passages, and more recently with desktop publishing software
+                  like Aldus PageMaker including versions of Lorem Ipsum
+                </p>
+              </div>
+              {/* Connector */}
+              <div className="border-l-2 border-gray-500 h-10 ml-14"></div>
+
+              <div className="bg-gray-700 p-4 rounded-lg shadow">
+                <h2 className="text-lg font-semibold">Collaborative coding</h2>
+                <p className="text-gray-400 mt-1">
+                  Lorem Ipsum is simply dummy text of the printing and
+                  typesetting industry. Lorem Ipsum has been the industry's
+                  standard dummy text ever since the 1500s, when an unknown
+                  printer took a galley of type and scrambled it to make a type
+                  specimen book. It has survived not only five centuries, but
+                  also the leap into electronic typesetting, remaining
+                  essentially unchanged. It was popularised in the 1960s with
+                  the release of Letraset sheets containing Lorem Ipsum
+                  passages, and more recently with desktop publishing software
+                  like Aldus PageMaker including versions of Lorem Ipsum
+                </p>
+              </div>
+              {/* Connector */}
+              <div className="border-l-2 border-gray-500 h-10 ml-14"></div>
+
+              <div className="bg-gray-700 p-4 rounded-lg shadow">
+                <h2 className="text-lg font-semibold">Automation and CI/CD</h2>
+                <p className="text-gray-400 mt-1">
+                  Lorem Ipsum is simply dummy text of the printing and
+                  typesetting industry. Lorem Ipsum has been the industry's
+                  standard dummy text ever since the 1500s, when an unknown
+                  printer took a galley of type and scrambled it to make a type
+                  specimen book. It has survived not only five centuries, but
+                  also the leap into electronic typesetting, remaining
+                  essentially unchanged. It was popularised in the 1960s with
+                  the release of Letraset sheets containing Lorem Ipsum
+                  passages, and more recently with desktop publishing software
+                  like Aldus PageMaker including versions of Lorem Ipsum
+                </p>
+              </div>
+              {/* Connector */}
+              <div className="border-l-2 border-gray-500 h-10 ml-14"></div>
+              <div className="bg-gray-700 p-4 rounded-lg shadow">
+                <h2 className="text-lg font-semibold">
+                  Contenerização
+                </h2>
+                <p className="text-gray-400 mt-1">
+                  Lorem Ipsum is simply dummy text of the printing and
+                  typesetting industry. Lorem Ipsum has been the industry's
+                  standard dummy text ever since the 1500s, when an unknown
+                  printer took a galley of type and scrambled it to make a type
+                  specimen book. It has survived not only five centuries, but
+                  also the leap into electronic typesetting, remaining
+                  essentially unchanged. It was popularised in the 1960s with
+                  the release of Letraset sheets containing Lorem Ipsum
+                  passages, and more recently with desktop publishing software
+                  like Aldus PageMaker including versions of Lorem Ipsum
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        {/* side menu */}
+        <div className="side-section">
+          <div className="pl-4 py-4 border-b border-gray-700">
+            <h2 className="text-sm uppercase mb-2 text-gray-400">
+              Social Media
+            </h2>
+            <div className="flex flex-row gap-3 align-items-center">
+              <FaInstagram size={35} />
+              <FaFacebook size={35} />
+              <FaTiktok size={35} />
+              <FaXTwitter size={35} />
+            </div>
+          </div>
+
+          <div className="p-4  border-b border-gray-700">
+            <h2 className="text-sm uppercase mb-2 text-gray-400">
+              Discussions
+            </h2>
+          </div>
+
+          <div className="">
+            <div className="p-4 flex-1  border-b border-gray-700">
+              <h2 className="text-sm uppercase mb-2 text-gray-400">Projects</h2>
+              <ul className="space-y-3">
+                <div>
+                  <li className="text-blue-500">
+                    📁 video-player-publicita-me
+                  </li>
+                  <small className="text-gray-400 pl-6">
+                    {" "}
+                    Video player with quee to handle different requests
+                  </small>
+                  <div className="flex flex-row align-items-center pl-6  gap-1 w-100">
+                    <div className="w-2 bg-blue-400 h-2 rounded self-center"></div>
+                    <div>
+                      <li className="text-gray-700">Python</li>
+                    </div>
+                  </div>
+                </div>
+
+                <div>
+                  <li className="text-blue-500">📁 publicite-me</li>
+                  <small className="text-gray-400 pl-6">
+                    {" "}
+                    Video player with quee to handle different requests
+                  </small>
+
+                  <div className="flex flex-row align-items-center pl-6  gap-2 w-100">
+                    <div className="flex flex-row align-items-center  gap-1 w-100">
+                      <div className="w-2 bg-yellow-400 h-2 rounded self-center"></div>
+                      <div>
+                        <li className="text-gray-700">JavaScript</li>
+                      </div>
+                    </div>
+
+                    <div className="flex flex-row align-items-center  gap-1 w-100">
+                      <div className="w-2 bg-red-400 h-2 rounded self-center"></div>
+                      <div>
+                        <li className="text-gray-700">Ruby</li>
+                      </div>
+
+                      <div className="flex flex-row align-items-center  gap-1 w-100">
+                        <div className="w-2 bg-red-800 h-2 rounded self-center"></div>
+                        <div>
+                          <li className="text-gray-700">Html</li>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div>
+                  <li className="text-blue-500">📁 Leaflet</li>
+                  <small className="text-gray-400 pl-6">
+                    {" "}
+                    Video player with quee to handle different requests
+                  </small>
+
+                  <div className="flex flex-row align-items-center pl-6  gap-2 w-100">
+                    <div className="flex flex-row align-items-center  gap-1 w-100">
+                      <div className="w-2 bg-yellow-400 h-2 rounded self-center"></div>
+                      <div>
+                        <li className="text-gray-700">JavaScript</li>
+                      </div>
+                    </div>
+
+                    <div className="flex flex-row align-items-center  gap-1 w-100">
+                      <div className="w-2 bg-red-400 h-2 rounded self-center"></div>
+                      <div>
+                        <li className="text-gray-700">Ruby</li>
+                      </div>
+
+                      <div className="flex flex-row align-items-center  gap-1 w-100">
+                        <div className="w-2 bg-red-800 h-2 rounded self-center"></div>
+                        <div>
+                          <li className="text-gray-700">Html</li>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div>
+                  <li className="text-blue-500">📁 bravos</li>
+                  <small className="text-gray-400 pl-6">
+                    {" "}
+                    Video player with quee to handle different requests
+                  </small>
+
+                  <div className="flex flex-row align-items-center pl-6  gap-2 w-100">
+                    <div className="flex flex-row align-items-center  gap-1 w-100">
+                      <div className="w-2 bg-yellow-400 h-2 rounded self-center"></div>
+                      <div>
+                        <li className="text-gray-700">JavaScript</li>
+                      </div>
+                    </div>
+
+                    <div className="flex flex-row align-items-center  gap-1 w-100">
+                      <div className="w-2 bg-red-400 h-2 rounded self-center"></div>
+                      <div>
+                        <li className="text-gray-700">Ruby</li>
+                      </div>
+
+                      <div className="flex flex-row align-items-center  gap-1 w-100">
+                        <div className="w-2 bg-red-800 h-2 rounded self-center"></div>
+                        <div>
+                          <li className="text-gray-700">Html</li>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div>
+                  <li className="text-blue-500">📁 demo-repository</li>
+                  <small className="text-gray-400 pl-6">
+                    {" "}
+                    Video player with quee to handle different requests
+                  </small>
+
+                  <div className="flex flex-row align-items-center pl-6  gap-2 w-100">
+                    <div className="flex flex-row align-items-center  gap-1 w-100">
+                      <div className="w-2 bg-yellow-400 h-2 rounded self-center"></div>
+                      <div>
+                        <li className="text-gray-700">JavaScript</li>
+                      </div>
+                    </div>
+
+                    <div className="flex flex-row align-items-center  gap-1 w-100">
+                      <div className="w-2 bg-red-400 h-2 rounded self-center"></div>
+                      <div>
+                        <li className="text-gray-700">Ruby</li>
+                      </div>
+
+                      <div className="flex flex-row align-items-center  gap-1 w-100">
+                        <div className="w-2 bg-red-800 h-2 rounded self-center"></div>
+                        <div>
+                          <li className="text-gray-700">Html</li>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </ul>
+            </div>
+
+            <div className="">
+              <div className="p-4 border-b border-gray-700">
+                <h2 className="text-sm uppercase mb-2 text-gray-400">
+                  Top Languages
+                </h2>
+
+                <ul className="flex space-x-3 ">
+                  <div className="flex flex-row align-items-center  gap-1 w-100">
+                    <div className="w-2 bg-yellow-400 h-2 rounded self-center"></div>
+                    <div>
+                      <li className="text-gray-700">JavaScript</li>
+                    </div>
+                  </div>
+
+                  <div className="flex flex-row align-items-center  gap-1 w-100">
+                    <div className="w-2 bg-blue-400 h-2 rounded self-center"></div>
+                    <div>
+                      <li className="text-gray-700">Python</li>
+                    </div>
+                  </div>
+
+                  <div className="flex flex-row align-items-center  gap-1 w-100">
+                    <div className="w-2 bg-blue-400 h-2 rounded self-center"></div>
+                    <div>
+                      <li className="text-gray-700">Typescript</li>
+                    </div>
+                  </div>
+
+                  <div className="flex flex-row align-items-center  gap-1 w-100">
+                    <div className="w-2 bg-red-400 h-2 rounded self-center"></div>
+                    <div>
+                      <li className="text-gray-700">Ruby</li>
+                    </div>
+                  </div>
+
+                  <div className="flex flex-row align-items-center  gap-1 w-100">
+                    <div className="w-2 bg-red-800 h-2 rounded self-center"></div>
+                    <div>
+                      <li className="text-gray-700">Html</li>
+                    </div>
+                  </div>
+                </ul>
+              </div>
+
+              <div className="p-4 border-b border-gray-700 tool-max-with">
+                <h2 className="text-sm uppercase mb-2 text-gray-400">
+                  TOP TOOLS
+                </h2>
+                <div className="flex flex-row align-items-center flex-wrap  gap-4 w-100">
+                  <div className="flex  flex-col ">
+                    <SiKubernetes size={35} className="self-center" />
+                    <small>Kubernetes</small>
+                  </div>
+                  <div className="flex  flex-col ">
+                    <FaDocker size={35} className="self-center" />
+                    <small>Docker</small>
+                  </div>
+
+                  <div className="flex  flex-col ">
+                    <SiVisualstudiocode size={35} className="self-center" />
+                    <small>Vs Code</small>
+                  </div>
+
+                  <div className="flex  flex-col ">
+                    <FaJenkins size={35} className="self-center" />
+                    <small>Jenkins</small>
+                  </div>
+
+                  <div className="flex  flex-col ">
+                    <SiPostman size={35} className="self-center" />
+                    <small>Postman</small>
+                  </div>
+
+                  <div className="flex  flex-col ">
+                    <SiNginx size={35} className="self-center" />
+                    <small>Nginx</small>
+                  </div>
+
+                  <div className="flex  flex-col ">
+                    <SiGrafana size={35} className="self-center" />
+                    <small>Grafana</small>
+                  </div>
+                </div>
+              </div>
+
+              <div className="p-4">
+                <h2 className="text-sm uppercase mb-2 text-gray-400">
+                  Desenvolvedores
+                </h2>
+                <div className="flex gap-2">
+                  <Avatar.Root className="AvatarRoot">
+                    <Avatar.Image
+                      className="AvatarImage"
+                      src="https://images.unsplash.com/photo-1492633423870-43d1cd2775eb?&w=128&h=128&dpr=2&q=80"
+                      alt="Colm Tuite"
+                    />
+                    <Avatar.Fallback className="AvatarFallback" delayMs={600}>
+                      CT
+                    </Avatar.Fallback>
+                  </Avatar.Root>
+                  <Avatar.Root className="AvatarRoot">
+                    <Avatar.Image
+                      className="AvatarImage"
+                      src="https://images.unsplash.com/photo-1511485977113-f34c92461ad9?ixlib=rb-1.2.1&w=128&h=128&dpr=2&q=80"
+                      alt="Pedro Duarte"
+                    />
+                    <Avatar.Fallback className="AvatarFallback" delayMs={600}>
+                      JD
+                    </Avatar.Fallback>
+                  </Avatar.Root>
+                  <Avatar.Root className="AvatarRoot">
+                    <Avatar.Fallback className="AvatarFallback">
+                      PD
+                    </Avatar.Fallback>
+                  </Avatar.Root>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div className="flex flex-col border border-gray-500 p-5 mb-5">
+        <div className="border-b border-gray-500 mb-3 pb-2">
+          <h6>Olá 👋</h6>
+        </div>
+        <p>
+          🙋‍ Okwetcha significa DAR/DOAR , a ideia é criar uma comunidade que
+          com auxilio da Engenharia ajude de algum modo países africanos ou
+          comunidades africanas a resolverem alguns problemas. 🌈
+        </p>
+      </div>
+    </main>
   );
 }
