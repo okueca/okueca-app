@@ -1,36 +1,44 @@
-FROM node:alpine AS builder 
-WORKDIR /app 
-COPY package*.json ./
-RUN npx install
-COPY . .
-RUN npx run build
-
-# Stage 2: Production image
-FROM node:alpine
+FROM node:alpine AS deps
 WORKDIR /app
-RUN addgroup --gid 1000 -S app && adduser --uid 1000 -S app -G app
 
-# Set permissions for app user for the WORKDIR    
-RUN chown -R app:app App/
-# Switch to the created user
-USER app
+RUN apk add --no-cache libc6-compat
 
-COPY --from=builder /app/.next ./.next
-COPY --from=builder /app/node_modules ./node_modules
-COPY --from=builder /app/package.json ./package.json
-COPY --from=builder /app/public ./public
-COPY --from=builder /app/next.config.js ./next.config.js
+COPY package*.json ./
 
-#set enviroment veriable
+RUN npm install
+
+
+FROM node:alpine AS builder
+WORKDIR /app
+
+COPY --from=deps /app/node_modules ./node_modules
+
+COPY . .
+
+RUN npm run build
+
+
+FROM node:alpine AS runner
+WORKDIR /app
+
 ENV NODE_ENV=production
-ENV PORT=3000
-ENV API_TOKEN=""
 
+RUN addgroup --system --gid 1001 nodejs && \
+    adduser --system --uid 1001 nextjs
 
-# Expose the application port
+COPY --from=builder /app/public ./public
+
+RUN mkdir .next && \
+    chown nextjs:nodejs .next
+
+COPY --from=builder --chown=nextjs:nodejs /app/.next/standalone ./
+COPY --from=builder --chown=nextjs:nodejs /app/.next/static ./.next/static
+
+USER nextjs
+
 EXPOSE 3000
-# Health check to confirm the app is responsive
-HEALTHCHECK --interval=30s --timeout=10s --retries=3 CMD curl -f http://localhost:3000/health || exit 1
 
-# Run the application
-CMD ["npm", "run", "start"]
+ENV PORT=3000
+ENV HOSTNAME="0.0.0.0"
+
+CMD ["node", "server.js"]
