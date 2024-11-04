@@ -29,7 +29,7 @@ export default function Home() {
   return (
     <main className=" container mx-auto ">
       <Header screen={screenSize} data={data} />
-      <section className="flex flex-row gap-5   flex-wrap w-100">
+      <section className="flex flex-row gap-5 flex-wrap-md  flex-wrap w-100">
         <Main />
         <Side data={data} />
       </section>
