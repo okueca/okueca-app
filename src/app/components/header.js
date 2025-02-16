@@ -38,7 +38,7 @@ const Header = ({data,screen}) => {
 
               <div className="flex flex-row items-center gap-2">
                 <MdEmail />
-                <div> okueca@gmail.com</div>
+                <div> geral@okueca.com</div>
               </div>
             </div>
           </div>
