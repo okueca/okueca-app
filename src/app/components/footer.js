@@ -22,8 +22,8 @@ const Footer = () => {
       </div>
       <div className="flex flex-row items-center gap-2">
         <MdEmail />
-        <div> okueca@gmail.com</div>
-        <p>okueca&#169;2021</p>
+        <div> geral@okueca.com</div>
+        <p>okueca&#169;2024</p>
       </div>
     </div>
   );

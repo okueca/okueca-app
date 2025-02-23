@@ -8,7 +8,7 @@ return(
       <div className="border-b border-gray-500 mb-3 pb-2">
         <h6>Olá 👋</h6>
       </div>
-      <p>
+      <p className="text-wra">
         🙋‍ Okwetcha significa DAR/DOAR , a ideia é criar uma comunidade
         que com auxilio da Engenharia ajude de algum modo países africanos
         ou comunidades africanas a resolverem alguns problemas. 🎮♟️💻🔌🦾
