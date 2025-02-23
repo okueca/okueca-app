@@ -14,11 +14,11 @@ const Footer = () => {
         </div>
         <p className="py-3">
           🙋💻 O código é a tela onde a imaginação encontra a lógica; cada linha
-          que você escreve tem o poder de criar, inovar e transformar. Continue
-          avançando, mesmo quando os bugs aparecerem — porque cada erro superado
-          é um passo mais perto da maestria.
+          que escreves tem o poder de criar, inovar e transformar. Continua a
+          avançar, mesmo quando surgirem bugs — porque cada erro ultrapassado é
+          um passo mais perto da maestria.
         </p>
-        <p>— Continue codando, continue criando! 🚀</p>
+        <p>— Continua a programar, continua a criar! 🚀</p>
       </div>
       <div className="flex flex-row items-center gap-2">
         <MdEmail />

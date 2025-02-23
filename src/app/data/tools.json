@@ -1,0 +1,39 @@
+"tools": [
+    {
+        "name": "Kubernetes",
+        "icon": "SiKubernetes"
+    },
+    {
+        "name": "Docker",
+        "icon": "FaDocker"
+    },
+    {
+        "name": "Kubernetes",
+        "icon": "SiKubernetes"
+    },
+    {
+        "name": "Vs Code",
+        "icon": "SiVisualstudiocode"
+    },
+    {
+        "name": "Jenkins",
+        "icon": "FaJenkins"
+    },
+    {
+        "name": "Postman",
+        "icon": "SiPostman"
+    },
+    {
+        "name": "Nginx",
+        "icon": "SiNginx"
+    },
+    {
+        "name": "Ansible",
+        "icon": "SiAnsible"
+    },
+    {
+        "name": "Grafana",
+        "icon": "SiGrafana"
+    },
+
+]

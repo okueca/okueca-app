@@ -24,7 +24,6 @@ export default function Home() {
     fetchPosts();
   }, []);
 
-  
 
   return (
     <main className=" container mx-auto ">

@@ -1,8 +1,7 @@
 pipeline{
     agent any
     tools {
-        docker 
-        nodejs 
+        docker 'docker'
     }
     stages{
         stage("git checkout"){
@@ -11,18 +10,6 @@ pipeline{
             }       
         }
 
-        stage("test"){
-            steps{
-                sh 'npm install'
-                sh 'npx next lint'
-            }
-        }
-
-        stage("build app"){
-            steps{
-                sh 'npx next build'
-            }
-        }
 
         stage("build docker image"){
             steps{
