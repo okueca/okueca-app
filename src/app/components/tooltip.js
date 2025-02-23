@@ -29,7 +29,8 @@ const Tooltip = ({ data }) => {
     fetchPosts();
   }, [data.login]);
   return (
-    <div className="tooltip">
+    
+    <div className="tooltip centered-element ">
       <div className="flex flex-col">
         <Avatar.Root className="AvatarRoot">
           <Avatar.Image
