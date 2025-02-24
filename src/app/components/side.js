@@ -49,10 +49,10 @@ const Side = ({ data }) => {
         </div>
       </div>
 
-      <div className="p-4  border-b border-gray-700">
+      {/* <div className="p-4  border-b border-gray-700">
         <h2 className="text-sm uppercase mb-2 text-gray-400">Eventos</h2>
         <small>Sem Eventos Registrado</small>
-      </div>
+      </div> */}
 
       <div className="">
         <div className="p-4 flex-1  border-b border-gray-700">
