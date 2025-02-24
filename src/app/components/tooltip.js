@@ -64,10 +64,10 @@ const Tooltip = ({ data }) => {
         <a href={userInfo?.html_url} target="_blank">
           <small>GitHub Profile</small>
         </a>
-        {lindin.map((item, index) => {
+        {lindin?.map((item, index) => {
           if (item.name === userInfo?.login) {
             return (
-              <a href={item.lindin} target="_blank" key={index}>
+              <a href={item?.lindin} target="_blank" key={index}>
                 <small>LinkedIn Profile</small>
               </a>
             );
