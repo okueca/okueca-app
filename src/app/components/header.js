@@ -1,10 +1,9 @@
-
 import Image from "next/image";
 import { FaLocationDot } from "react-icons/fa6";
 import { BsFillPeopleFill } from "react-icons/bs";
 import { MdEmail } from "react-icons/md";
 
-const Header = ({data,screen}) => {
+const Header = ({ data, screen }) => {
   return (
     <section className=" flex-wrap border-b border-gray-500 p-5 mb-10">
       <div className="flex flex-row items-center gap-5 justify-between">
@@ -21,9 +20,9 @@ const Header = ({data,screen}) => {
           <div className="flex flex-col justify-center align-items-center gap-4">
             <h6>OKWETCHA</h6>
             <p className="text-wra">
-              Okueca is a non-profit African organization that aims to develop
-              solutions with the help of technology in order to assist in some
-              way.
+              Okueca é uma organização africana sem fins lucrativos que pretende
+              desenvolver soluções com a ajuda da tecnologia para auxiliar de
+              alguma forma.
             </p>
             <div className="flex flex-row align-items-center flex-wrap gap-5 ">
               <div className="flex flex-row items-center gap-2">

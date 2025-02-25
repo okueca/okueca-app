@@ -166,34 +166,13 @@ const Side = ({ data }) => {
             </div>
 
             <div>
-              <li className="text-blue-500">📁 demo-repository</li>
+              <li className="text-blue-500">📁 </li>
               <small className="text-gray-400 pl-6">
                 {" "}
-                Video player with quee to handle different requests
+                
               </small>
 
-              <div className="flex flex-row align-items-center pl-6  gap-2 w-100">
-                <div className="flex flex-row align-items-center  gap-1 w-100">
-                  <div className="w-2 bg-yellow-400 h-2 rounded self-center"></div>
-                  <div>
-                    <li className="text-gray-200">JavaScript</li>
-                  </div>
-                </div>
-
-                <div className="flex flex-row align-items-center  gap-1 w-100">
-                  <div className="w-2 bg-red-400 h-2 rounded self-center"></div>
-                  <div>
-                    <li className="text-gray-200">Ruby</li>
-                  </div>
-
-                  <div className="flex flex-row align-items-center  gap-1 w-100">
-                    <div className="w-2 bg-red-800 h-2 rounded self-center"></div>
-                    <div>
-                      <li className="text-gray-200">Html</li>
-                    </div>
-                  </div>
-                </div>
-              </div>
+              
             </div>
           </ul>
         </div>
