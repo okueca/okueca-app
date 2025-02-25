@@ -23,14 +23,6 @@ import {
 } from "react-icons/si";
 import Tooltip from "./tooltip";
 
-const lindin = [
-  {
-    name: "",
-    lindin:
-      "https://www.linkedin.com/public-profile/settings?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_self_edit_contact-info%3Bj2yFMCYgRMafJFMBFBneBQ%3D%3D",
-  },
-];
-
 const Side = ({ data }) => {
   return (
     <div className="side-section w-100">
@@ -40,6 +32,8 @@ const Side = ({ data }) => {
           <a
             href="https://www.instagram.com/okueca?igsh=bHc3eGhmdWpodmRt"
             alt="insta"
+            target="_blank"
+            rel="noopener noreferrer"
           >
             <FaInstagram size={35} />
           </a>
@@ -76,7 +70,8 @@ const Side = ({ data }) => {
               <li className="text-blue-500">📁 Publicite-me</li>
               <small className="text-gray-400 pl-6">
                 {" "}
-                Projeto de publicidade com contador de visualizações e relatórios
+                Projeto de publicidade com contador de visualizações e
+                relatórios
               </small>
 
               <div className="flex flex-row align-items-center pl-6  gap-2 w-100">
@@ -104,10 +99,20 @@ const Side = ({ data }) => {
             </div>
 
             <div>
-              <li className="text-blue-500"><a  href="https://sangue.okueca.com/" >📁 Sangue</a></li>
+              <li className="text-blue-500">
+                <a
+                  href="https://sangue.okueca.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  📁 Sangue
+                </a>
+              </li>
               <small className="text-gray-400 pl-6">
                 {" "}
-                A aplicação tem como objetivo conectar dadores de sangue voluntários com hospitais e pacientes que necessitam de transfusões em Angola
+                A aplicação tem como objetivo conectar dadores de sangue
+                voluntários com hospitais e pacientes que necessitam de
+                transfusões em Angola
               </small>
 
               <div className="flex flex-row align-items-center pl-6  gap-2 w-100">
@@ -135,7 +140,15 @@ const Side = ({ data }) => {
             </div>
 
             <div>
-              <li className="text-blue-500"><a href="https://bravos.okueca.com/users/sign_in">📁 bravos</a></li>
+              <li className="text-blue-500">
+                <a
+                  href="https://bravos.okueca.com/users/sign_in"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  📁 bravos
+                </a>
+              </li>
               <small className="text-gray-400 pl-6">
                 {" "}
                 Uma aplição que visa incentivar pessoas a praticar desportos
@@ -167,12 +180,7 @@ const Side = ({ data }) => {
 
             <div>
               <li className="text-blue-500">📁 </li>
-              <small className="text-gray-400 pl-6">
-                {" "}
-                
-              </small>
-
-              
+              <small className="text-gray-400 pl-6"> </small>
             </div>
           </ul>
         </div>
