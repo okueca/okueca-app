@@ -59,10 +59,10 @@ const Side = ({ data }) => {
           <h2 className="text-sm uppercase mb-2 text-gray-400">Projects</h2>
           <ul className="space-y-3">
             <div>
-              <li className="text-blue-500">📁 video-player-publicita-me</li>
+              <li className="text-blue-500">📁 Video-Player-Publicita-me</li>
               <small className="text-gray-400 pl-6">
                 {" "}
-                Video player with quee to handle different requests
+                Reprodutor de vídeo com fila para gerir diferentes pedidos
               </small>
               <div className="flex flex-row align-items-center pl-6  gap-1 w-100">
                 <div className="w-2 bg-blue-400 h-2 rounded self-center"></div>
@@ -73,10 +73,10 @@ const Side = ({ data }) => {
             </div>
 
             <div>
-              <li className="text-blue-500">📁 publicite-me</li>
+              <li className="text-blue-500">📁 Publicite-me</li>
               <small className="text-gray-400 pl-6">
                 {" "}
-                Video player with quee to handle different requests
+                Projeto de publicidade com contador de visualizações e relatórios
               </small>
 
               <div className="flex flex-row align-items-center pl-6  gap-2 w-100">
@@ -104,10 +104,10 @@ const Side = ({ data }) => {
             </div>
 
             <div>
-              <li className="text-blue-500">📁 Leaflet</li>
+              <li className="text-blue-500"><a  href="https://sangue.okueca.com/" >📁 Sangue</a></li>
               <small className="text-gray-400 pl-6">
                 {" "}
-                Video player with quee to handle different requests
+                A aplicação tem como objetivo conectar dadores de sangue voluntários com hospitais e pacientes que necessitam de transfusões em Angola
               </small>
 
               <div className="flex flex-row align-items-center pl-6  gap-2 w-100">
@@ -135,10 +135,10 @@ const Side = ({ data }) => {
             </div>
 
             <div>
-              <li className="text-blue-500">📁 bravos</li>
+              <li className="text-blue-500"><a href="https://bravos.okueca.com/users/sign_in">📁 bravos</a></li>
               <small className="text-gray-400 pl-6">
                 {" "}
-                Video player with quee to handle different requests
+                Uma aplição que visa incentivar pessoas a praticar desportos
               </small>
 
               <div className="flex flex-row align-items-center pl-6  gap-2 w-100">
