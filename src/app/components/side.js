@@ -178,10 +178,7 @@ const Side = ({ data }) => {
               </div>
             </div>
 
-            <div>
-              <li className="text-blue-500">📁 </li>
-              <small className="text-gray-400 pl-6"> </small>
-            </div>
+           
           </ul>
         </div>
 
