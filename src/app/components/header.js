@@ -17,7 +17,7 @@ const Header = ({ data, screen }) => {
             />
           </div>
 
-          <div className="flex flex-col justify-center align-items-center gap-4">
+          <div className="flex flex-col justify-center align-items-center gap-4 md:text-sm ">
             <h6>OKWETCHA</h6>
             <p className="text-wra">
               Okueca é uma organização africana sem fins lucrativos que pretende
@@ -32,7 +32,7 @@ const Header = ({ data, screen }) => {
 
               <div className="flex flex-row items-center gap-2">
                 <FaLocationDot />
-                <div> 🇵🇹 Portugal/🇦🇴Angola/🇨🇻Cabo Verde</div>
+                <div> 🇦🇴Angola/🇨🇻Cabo Verde/🇵🇹 Portugal</div>
               </div>
 
               <div className="flex flex-row items-center gap-2">
@@ -44,7 +44,7 @@ const Header = ({ data, screen }) => {
         </div>
 
         {screen > "1024" && (
-          <div className="">
+          <div className=" hidden lg:block">
             <Image
               src="/animationbrain.gif"
               width={150}
